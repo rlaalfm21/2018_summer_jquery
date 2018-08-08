@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        *{margin: 0 ;padding: 0 }
+        ul li{list-style: none}
+
+        #slide-fade{width: 1000px; margin: 0 auto; position: relative;}
+        #slide-fade li{position: absolute; left: 0 ; right: 0 ; bottom: 0 ; top: 0;  ;transition: 1s;}
+        #slide-fade ul{height: 400px}
+        #slide-fade li.active{opacity: 1; z-index: 10;}
+        #slide-fade li:nth-child(1){background: #ffa;}
+        #slide-fade li:nth-child(2){background: #afa;}
+        #slide-fade li:nth-child(3){background: #faa;}
+
+        #slide-up{width: 1000px; height: 400px; margin: 0 auto;
+            position: relative; overflow: hidden}
+        #slide-up ul{width: 300%; display: flex;animation:slide 6s infinite;}
+        #slide-up li{width: 33.33%; height: 400px}
+        #slide-up li:nth-child(1){background: #ffa;}
+        #slide-up li:nth-child(2){background: #afa;}
+        #slide-up li:nth-child(3){background: #faa;}
+
+        #slide{width: 1000px; margin: 0 auto;}
+        #slide ul{width: 300%; display: flex;animation:slide 6s infinite;}
+        #slide li{width: 33.33%; height: 400px}
+        #slide li:nth-child(1){background: #ffa;}
+        #slide li:nth-child(2){background: #afa;}
+        #slide li:nth-child(3){background: #faa;}
+
+        .arow{position: absolute; top:calc(50% - 25px); height: 50px; line-height: 50px; font-size: 30px;}
+        .left{left: 0}
+        .right{right: 0}
+
+        .pos{  position: absolute  ; right: 0; left: 0 ; text-align: center; bottom:25px;z-index: 20;}
+        .pos a{width: 20px; height: 20px; border-radius: 20px; background: #aaa; display: inline-block; transition: 3s; font-size:0}
+
+    </style>
+</head>
+
+
+
+<body>
+<div id="slide-up" class="fade in">
+    <ul>
+        <li class="ative"></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <a href="#" class="arow left">왼쪽</a>
+    <a href="#" class="arow right">오른쪽</a>
+    <p class="pos">
+        <a href="#" class="active"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </p>
+</div>
+<script src="jq.js">
+</script>
+</body>
+</html>
